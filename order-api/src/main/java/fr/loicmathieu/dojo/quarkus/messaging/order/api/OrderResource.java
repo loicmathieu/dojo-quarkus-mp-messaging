@@ -1,8 +1,11 @@
 package fr.loicmathieu.dojo.quarkus.messaging.order.api;
 
+import org.eclipse.microprofile.reactive.messaging.Channel;
+import org.eclipse.microprofile.reactive.messaging.Emitter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -15,9 +18,14 @@ import javax.ws.rs.core.MediaType;
 public class OrderResource {
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderResource.class);
 
+    @Inject @Channel("orders")
+    Emitter<Order> emitter;
+
+
+
     @POST
     public void create(Order order){
         LOGGER.info("Creating order: {}", order);
-        //TODO send the order to an 'orders' channel using an Emitter
+        emitter.send(order);
     }
 }
