@@ -30,7 +30,7 @@ For this step, you can refer to the [Sending / Receiving messages from non-react
 - Define an `Emitter<Order>` configured with the `orders`. This channel is already configured in the `application.properties`.
 - Update the `create(Order order)` method to use this emitter to send the Order to the broker.
 
-Start the application with ̀`mvn package:dev`.
+Start the application with `mvn quarkus:dev`.
 
 You can send orders to the endpoint with this curl: 
 
@@ -51,7 +51,7 @@ These channels are already configured in the `application.properties`.
 You can read the section [The price converter](https://quarkus.io/guides/kafka#the-price-converter) of the Quarkus Kafka guide for an exemple.
 - Add some logging to see if the message arrives.
 
-Start the application with `mvn package:dev` and create orders on the order API.
+Start the application with `mvn quarkus:dev` and create orders on the order API.
 
 ## Step 3
 
@@ -59,7 +59,7 @@ Start the application with `mvn package:dev` and create orders on the order API.
 - Create a method that takes an `EnhancedOrder` as parameter and save if via the `EnhancedOrderService.add()` method.
 - Annotate this method so it listens to the `enhanced-orders` channel. This channel is already configured in the `application.properties`.
 
-Start the application with ̀`mvn package:dev`.
+Start the application with ̀`mvn quarkus:dev`.
 
 After creating a new order via the order API, you should have this order enhanced, then available via the search API.
 
