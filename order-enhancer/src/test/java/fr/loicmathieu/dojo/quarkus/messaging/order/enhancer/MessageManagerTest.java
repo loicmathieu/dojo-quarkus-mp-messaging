@@ -22,14 +22,14 @@ class MessageManagerTest {
     @Test
     void test() {
         // Retrieves the in-memory source to send message
-        InMemorySource<Order> prices = connector.source("orders");
+        InMemorySource<Order> orders = connector.source("orders");
         // Retrieves the in-memory sink to check what is received
         InMemorySink<EnhancedOrder> results = connector.sink("enhanced-orders");
 
         // Send order
         Order order = new Order();
         order.userId = "user1";
-        prices.send(order);
+        orders.send(order);
 
         // Check you have receives the expected messages
         Assertions.assertEquals(1, results.received().size());
