@@ -64,7 +64,7 @@ Check the SmallRye Reactive Messaging [Testing section](https://smallrye.io/smal
 ## Step 4
 
 - Go to the [search-api](search-api) and open the `fr.loicmathieu.dojo.quarkus.messaging.search.MessageManager`.
-- Create a method that takes an `EnhancedOrder` as parameter and save if via the `EnhancedOrderService.add()` method.
+- Create a method that takes an `EnhancedOrder` as parameter and save it via the `EnhancedOrderService.add()` method.
 - Annotate this method so it listens to the `enhanced-orders` channel. This channel is already configured in the `application.properties`.
 
 Start the application with ̀`mvn quarkus:dev`.
