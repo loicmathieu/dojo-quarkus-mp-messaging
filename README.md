@@ -4,7 +4,7 @@ A Quarkus dojo to experiment MicroProfile reactive messaging with Kafka
 First, start the Kafka broker using the provided docker compose: 
 
 ```
-docker-compose up
+docker-compose up -d
 ```
 
 Then, you will develop an application with three components:
