@@ -6,5 +6,5 @@ public class EnhancedOrder {
     public String userId;
     public String shippingAddress;
     public String userFirstName;
-    public String userLasteName;
+    public String userLastName;
 }
