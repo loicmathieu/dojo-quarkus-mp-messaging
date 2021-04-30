@@ -23,8 +23,8 @@ public class MessageManager {
         enhancedOrder.totalPrice = order.totalPrice;
         enhancedOrder.userId = order.userId;
         User user = userService.getUser(order.userId);
-        enhancedOrder.userLasteName = user.firstName;
-        enhancedOrder.userFirstName = user.lastName;
+        enhancedOrder.userFirstName = user.firstName;
+        enhancedOrder.userLastName = user.lastName;
         return enhancedOrder;
     }
 }
