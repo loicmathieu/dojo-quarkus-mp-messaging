@@ -17,14 +17,14 @@ Then, you will develop an application with three components:
 
 Before going to the various steps of the dojo, please take some time to read the following documentations:
 
-- [Smallrye Reactive Messaging](https://smallrye.io/smallrye-reactive-messaging/smallrye-reactive-messaging/2.7/index.html)
-- [Smallrye Reactive Messaging - Concepts](https://smallrye.io/smallrye-reactive-messaging/smallrye-reactive-messaging/2.7/concepts.html)
+- [Smallrye Reactive Messaging](https://smallrye.io/smallrye-reactive-messaging/smallrye-reactive-messaging/3.6/index.html)
+- [Smallrye Reactive Messaging - Concepts](https://smallrye.io/smallrye-reactive-messaging/smallrye-reactive-messaging/3.6/concepts.html)
 
 You can refer to the Quarkus [USING APACHE KAFKA WITH REACTIVE MESSAGING](https://quarkus.io/guides/kafka) guide at any time.
 
 ## Step 1
 
-For this step, you can refer to the [Sending / Receiving messages from non-reactive code](https://smallrye.io/smallrye-reactive-messaging/smallrye-reactive-messaging/2.7/emitter/emitter.html) documentation.
+For this step, you can refer to the [Sending / Receiving messages from non-reactive code](https://smallrye.io/smallrye-reactive-messaging/smallrye-reactive-messaging/3.6/emitter/emitter.html) documentation.
 
 - Go to the [order-api](order-api) and open the `fr.loicmathieu.dojo.quarkus.messaging.order.api.OrderResource` REST endpoint.
 - Define an `Emitter<Order>` configured with the `orders`. This channel is already configured in the `application.properties`.
@@ -59,7 +59,7 @@ Start the application with `mvn quarkus:dev` and create orders on the order API.
 
  - Open the test class `fr.loicmathieu.dojo.quarkus.messaging.order.enhancer.MessageManagerTest`, run it, it should fail.
  - Open the class `fr.loicmathieu.dojo.quarkus.messaging.order.enhancer.InMemoryChannelTestResource` and mock the channels.
-Check the SmallRye Reactive Messaging [Testing section](https://smallrye.io/smallrye-reactive-messaging/smallrye-reactive-messaging/2.7/testing/testing.html) for an example.
+Check the SmallRye Reactive Messaging [Testing section](https://smallrye.io/smallrye-reactive-messaging/smallrye-reactive-messaging/3.6/testing/testing.html) for an example.
 
 ## Step 4
 
