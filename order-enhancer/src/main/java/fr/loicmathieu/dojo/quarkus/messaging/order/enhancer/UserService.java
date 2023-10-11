@@ -1,6 +1,6 @@
 package fr.loicmathieu.dojo.quarkus.messaging.order.enhancer;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 import java.util.Map;
 
 @ApplicationScoped
