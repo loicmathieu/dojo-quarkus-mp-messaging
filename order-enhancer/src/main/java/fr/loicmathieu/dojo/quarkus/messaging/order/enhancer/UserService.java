@@ -1,7 +1,8 @@
 package fr.loicmathieu.dojo.quarkus.messaging.order.enhancer;
 
-import javax.enterprise.context.ApplicationScoped;
 import java.util.Map;
+
+import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class UserService {
