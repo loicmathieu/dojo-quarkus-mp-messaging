@@ -1,6 +1,6 @@
 package fr.loicmathieu.dojo.quarkus.messaging.search;
 
-import javax.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 import java.util.ArrayList;
 import java.util.List;
 
